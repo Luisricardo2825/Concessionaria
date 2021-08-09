@@ -1,0 +1,81 @@
+*********OBS: Eu coloquei algumas funções de acordo com as 'pessoas' do projeto, ex: funcionário, cliente, gerente, e não por função delas, tipo funcionário cadastra cliente, e tal, porque do jeito que fiz, dá pra ter uma maior ideia de como vão ser criadas os frames.
+
+###########
+# Gerente #
+###########
+
+1. Cadastra funcionários ("tá pronto" (preciso averiguar alguns dados, tipo o do endereço, verificação do cpf, do estado, já que o campo tá livre..), pena que a imagem tá dando bug! :[)
+
+2. Mostra os funcionários (pode ser na table, é bom que na tela tenha opção pra gerar relatório de todos os funcionários)
+
+3. Mostra os dados de um x funcionário (faz por tabela)
+
+4. Altera os dados de um x funcionário (vou deixar tu escolher, pq se for por campo, pode ser que tenha que alterar o tamanho do Frame, já tabela, da mesma forma KJKSLDJDSK, esteticamente, eu preferiria os campos, porque a cor da tabela é feia, mas a tabela também é prática :)
+
+5. Exclui os dados de um x funcionário
+(mesma história do item 4, pode ser por seleção da tabela ou por campo, uma vez que vai ser necessário apenas pesquisar o algum dado do funcionário [nome, cpf ou usuário, n sei], selecionar o nome do cara na tabela e clicar em excluir... talvez seja melhor por tabela. e.e)
+
+6. Relatório sobre as vendas dos funcionários (quanto cada um vendeu).
+
+7. Comissao do funcionário (é pra acrescentar um percentual no salário do cara, de acordo com a venda... eu n pensei nisso ainda muito bem, mas provavelmente tá atrelado a simplesmente retirar um determinado percentual de acordo com a venda do mês, e acrescentar no salário fixo.)
+
+###########
+# Veículo #
+###########
+
+1. Cadastra veículo
+	- modelo
+	- fabricante
+	- cor
+	- ano
+	- preco
+	- numero do Chassi
+		... é o que tem na apostila, mas se tiver algo pra sugerir, põe aí! :}
+
+2. Mostrar veículo (mesma situação do Funcionário, por table).
+
+3. Mostrar veículo (essa pe uma função tanto pra um gerente como funcionário, até pq o funcionário precisa mostrar o carro pro cliente...)
+	 pode ser pelo:
+		1 - modelo do veículo;
+		2 - número do Chassi;
+
+4. Alterar dados de um x veículo (mesma situação do funcionário :c)
+
+5. Excluir um x veículo (the same thing x..x)
+
+6. Relatórios sobre os veículos:
+		1 - Total gerado pela venda(R$) dos carros;
+		2 - Total das vendas dos funcionários (é diferente do item 7 dos funcionários!);
+		3 - Total das vendas(R$) por modelo do carro;
+		4 - Como tá o estoque (acho que só vai ser dito a quantidade dos carros, nada 		relacionado ao valor)
+		5 - Todas as promoções disponíveis;
+		6 - Todos os clientes (tipo.. tudo mesmo. quanto compraram, quando, onde, o que, etc) 
+					com certeza tá faltando coisa, mas ok...
+
+#############
+# Promoções #
+#############
+
+1. Cadastrar promoções
+	- intervalo da promoção (data de início e expiracao)
+	- id do carro da promoção (ou o modelo, marca, depende da promoção)
+	- desconto da promoção (acho mió o preço)
+
+2. Consultar promoção
+	- por data, ou modelo, marca.
+
+3. Listar Promoções
+
+###########
+# Cliente #
+###########
+
+1. Cadastrar cliente (precisa verificar algumas coisas, tipo a imagem, os campos de cpf, rg, mesma situação do funcionário)
+
+2. Alterar dados do cliente (tô concluindo que é melhor tabela, pena que esteticamente fica feio :cc)
+
+3. Mostrar clientes (memsa situação do funcionário, mas põe uma caixa de texto pra buscar pelo nome, cpf, sla, escolhe aí kkk (põe cpf, é mais seguro).
+
+4. excluir cliente (o funcionário e o gerente devem ter acesso aqui, ou só o gerente?, se for ambos, vai ter que colocar no menu do gerente pra ir pra tela... bela poluição, acho que vai ficar..)
+
+	

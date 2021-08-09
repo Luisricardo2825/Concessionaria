@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report2" language="groovy" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="00a6a24b-ad3a-4ebc-baac-a09c6e4b4927">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<style name="Title" forecolor="#FFFFFF" fontName="Times New Roman" fontSize="50" isBold="false" pdfFontName="Times-Bold"/>
+	<style name="SubTitle" forecolor="#CCCCCC" fontName="Times New Roman" fontSize="18" isBold="false" pdfFontName="Times-Roman"/>
+	<style name="Column header" forecolor="#666666" fontName="Times New Roman" fontSize="14" isBold="true" pdfFontName="Times-Roman"/>
+	<style name="Detail" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman"/>
+	<style name="Row" mode="Transparent" fontName="Times New Roman" pdfFontName="Times-Roman">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[$V{REPORT_COUNT}%2 == 0]]></conditionExpression>
+			<style mode="Opaque" backcolor="#F0EFEF"/>
+		</conditionalStyle>
+	</style>
+	<queryString language="SQL">
+		<![CDATA[SELECT
+     funcionario.`idfuncionario` AS funcionario_idfuncionario,
+     funcionario.`nome` AS funcionario_nome,
+     funcionario.`datanasc` AS funcionario_datanasc,
+     funcionario.`cpf` AS funcionario_cpf,
+     funcionario.`rg` AS funcionario_rg,
+     funcionario.`num_pis` AS funcionario_num_pis,
+     funcionario.`telefone` AS funcionario_telefone
+FROM
+     `funcionario` funcionario]]>
+	</queryString>
+	<field name="funcionario_idfuncionario" class="java.lang.Integer"/>
+	<field name="funcionario_nome" class="java.lang.String"/>
+	<field name="funcionario_datanasc" class="java.lang.String"/>
+	<field name="funcionario_cpf" class="java.lang.String"/>
+	<field name="funcionario_rg" class="java.lang.String"/>
+	<field name="funcionario_num_pis" class="java.lang.String"/>
+	<field name="funcionario_telefone" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="132" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="553" height="95" backcolor="#00FFFF" uuid="3d8ff65a-e604-401a-b363-951427e4cbc3"/>
+				<staticText>
+					<reportElement style="Title" x="0" y="0" width="416" height="66" uuid="943475d1-17c0-4605-894f-27f08b0f103a"/>
+					<textElement textAlignment="Left" verticalAlignment="Middle">
+						<font fontName="Tahoma" size="28" isBold="true"/>
+					</textElement>
+					<text><![CDATA[Relatório  De Funcionarios]]></text>
+				</staticText>
+				<staticText>
+					<reportElement style="SubTitle" isPrintRepeatedValues="false" x="157" y="66" width="249" height="29" forecolor="#FFFFFF" uuid="907389f8-0d88-4d29-a25e-dd68480e39da"/>
+					<textElement>
+						<font fontName="Tahoma" size="22" isBold="false" isStrikeThrough="false"/>
+					</textElement>
+					<text><![CDATA[Vilet's Muscles]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement mode="Opaque" x="0" y="100" width="553" height="32" forecolor="#00FFFF" backcolor="#000000" uuid="3cd6c312-baee-4bd7-9b31-bc3724e10272"/>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement x="307" y="12" width="144" height="20" forecolor="#FFFFFF" uuid="c7950e6d-7aa3-4360-9e54-830d12d74952"/>
+					<textElement textAlignment="Right">
+						<font size="12"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<image scaleImage="FillFrame" hAlign="Center" vAlign="Middle">
+				<reportElement x="405" y="0" width="150" height="106" uuid="65dd4520-598b-4602-b278-02474b6b4ef6"/>
+				<imageExpression><![CDATA["C:\\Users\\luis_\\Desktop\\Concessionaria\\src\\Icon\\Nova_logo.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="26" splitType="Stretch">
+			<staticText>
+				<reportElement style="Column header" x="0" y="7" width="54" height="18" forecolor="#000000" uuid="9dff3692-7499-46d2-91bd-6a830a13b8ac"/>
+				<textElement>
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ID]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="54" y="7" width="75" height="18" forecolor="#000000" uuid="179fbe88-7dc6-4f42-bfe0-cc33108358eb"/>
+				<textElement>
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nome]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="129" y="7" width="79" height="18" forecolor="#000000" uuid="b0f4f297-2230-4cc1-b9bd-af5b7daea1ae"/>
+				<textElement>
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Nascimento]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="208" y="8" width="79" height="18" forecolor="#000000" uuid="c21fb062-3203-4a40-a12b-43d4df681b27"/>
+				<textElement>
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[CPF]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="297" y="7" width="79" height="18" forecolor="#000000" uuid="47dfb1ff-43e8-469b-a1c9-53bb7e916d83"/>
+				<textElement>
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[RG]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="386" y="7" width="65" height="18" forecolor="#000000" uuid="942af1ee-c102-4faa-9905-b9fe8fd0b2d8"/>
+				<textElement>
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[PIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement style="Column header" x="474" y="7" width="79" height="18" forecolor="#000000" uuid="1d86bbcf-f949-4854-97fb-98e50fb74fc4"/>
+				<textElement>
+					<font fontName="Tahoma" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Telefone]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="18" splitType="Stretch">
+			<frame>
+				<reportElement style="Row" mode="Opaque" x="0" y="0" width="555" height="18" uuid="65241110-b75c-459c-8f1e-7d82caad0ddd"/>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="0" y="0" width="54" height="18" uuid="69eb8fa7-afa9-4902-a77c-a7f04b26b27c"/>
+					<textElement>
+						<font fontName="Tahoma" size="12" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{funcionario_idfuncionario}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="54" y="0" width="75" height="18" uuid="935a7017-f9ad-48d4-bc3d-bf41b10fea9c"/>
+					<textElement>
+						<font fontName="Tahoma" size="12" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{funcionario_nome}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="129" y="0" width="79" height="18" uuid="8ba6f39f-48bb-493b-9c69-5d3a201a129f"/>
+					<textElement>
+						<font fontName="Tahoma" size="12" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{funcionario_datanasc}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="208" y="0" width="79" height="18" uuid="1eb281cf-c915-4f79-acaa-761a94dbef93"/>
+					<textElement>
+						<font fontName="Tahoma" size="12" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{funcionario_cpf}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="297" y="0" width="79" height="18" uuid="f9e2edf2-52a5-424e-bb1e-ef52115b55b0"/>
+					<textElement>
+						<font fontName="Tahoma" size="12" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{funcionario_rg}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="386" y="0" width="65" height="18" uuid="8cc984bb-a5da-4cda-a573-380ac6929fb8"/>
+					<textElement>
+						<font fontName="Tahoma" size="12" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{funcionario_num_pis}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true">
+					<reportElement style="Detail" positionType="Float" x="474" y="0" width="79" height="18" uuid="ddcb3bd4-20d1-4be1-aec5-491da7ea8425"/>
+					<textElement>
+						<font fontName="Tahoma" size="12" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[$F{funcionario_telefone}]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="7" splitType="Stretch">
+			<line>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="3" width="555" height="1" uuid="93dce984-e58d-4835-ae2b-82f6e9a85877"/>
+				<graphicElement>
+					<pen lineWidth="0.5" lineColor="#999999"/>
+				</graphicElement>
+			</line>
+		</band>
+	</columnFooter>
+	<pageFooter>
+		<band height="25" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="1" width="555" height="24" forecolor="#D0B48E" backcolor="#000000" uuid="b41beabf-eeb5-4a92-a2d9-295d10fd09a4"/>
+				<textField evaluationTime="Report">
+					<reportElement style="Column header" x="513" y="0" width="40" height="20" forecolor="#FFFFFF" uuid="e0614e54-87a4-47c4-b635-3b5787b6b959"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
+				</textField>
+				<textField>
+					<reportElement style="Column header" x="433" y="0" width="80" height="20" forecolor="#FFFFFF" uuid="522c60b2-a759-4735-9772-fdcb8fd376e8"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA["Page "+$V{PAGE_NUMBER}+" of"]]></textFieldExpression>
+				</textField>
+				<textField pattern="EEEEE dd MMMMM yyyy">
+					<reportElement style="Column header" x="2" y="1" width="197" height="20" forecolor="#FFFFFF" uuid="b23fbfb8-d1b2-4dda-a304-024e0fbb5cf1"/>
+					<textElement verticalAlignment="Middle">
+						<font size="10" isBold="false"/>
+					</textElement>
+					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</pageFooter>
+	<summary>
+		<band splitType="Stretch"/>
+	</summary>
+</jasperReport>
